@@ -1,9 +1,40 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="sk">
 <head>
-  <title>Bot</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>cTrader Auto Signal v5</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Funguje to 🚀</h1>
+  <main>
+    <h1>cTrader Auto Signal v5</h1>
+    <p class="sub">Automatické signály + Connect cTrader OAuth.</p>
+
+    <section class="status">
+      <div>Backend: <span id="backend">checking...</span></div>
+      <div>Mode: <span id="mode">-</span></div>
+      <div>cTrader: <span id="auth">-</span></div>
+      <div>Last update: <span id="updated">-</span></div>
+      <button id="connect">Connect cTrader</button>
+      <button id="refresh">Refresh token</button>
+    </section>
+
+    <section id="cards" class="cards"></section>
+
+    <section class="info">
+      <h2>Ako to má fungovať</h2>
+      <ol>
+        <li>Prvýkrát klikneš Connect cTrader.</li>
+        <li>Prihlásiš sa cez cTrader ID.</li>
+        <li>Server uloží token.</li>
+        <li>Potom už server sleduje trh automaticky.</li>
+        <li>Ty dostaneš iba upozornenie BUY/SELL/WAIT.</li>
+      </ol>
+      <p class="warn">Poznámka: OAuth je pripravený. Live socket feed z cTraderu je ďalší implementačný krok.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
