@@ -1,9 +1,12 @@
 {
-  "name": "cTrader Auto Signal v5",
-  "short_name": "AutoSignal",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0d1117",
-  "theme_color": "#0d1117",
-  "icons": []
+  "name": "bot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
