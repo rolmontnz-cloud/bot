@@ -124,10 +124,13 @@ function escapeHtml(str) {
 
 setInterval(() => scanMarkets().catch(console.error), 30_000);
 scanMarkets().catch(console.error);
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+setInterval(() => scanMarkets().catch(console.error), 60000);
+scanMarkets().catch(console.error);
 
 app.get("/", (req, res) => {
   res.send("Bot is running 🚀");
+});
+
+app.listen(PORT, () => {
+  console.log(`cTrader bot running on port ${PORT}`);
 });
