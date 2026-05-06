@@ -124,8 +124,7 @@ function escapeHtml(str) {
 
 setInterval(() => scanMarkets().catch(console.error), 30_000);
 scanMarkets().catch(console.error);
-setInterval(() => scanMarkets().catch(console.error), 60000);
-scanMarkets().catch(console.error);
+
 
 app.get("/", (req, res) => {
   res.send("Bot is running 🚀");
