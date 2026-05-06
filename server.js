@@ -124,8 +124,10 @@ function escapeHtml(str) {
 
 setInterval(() => scanMarkets().catch(console.error), 30_000);
 scanMarkets().catch(console.error);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
-app.listen(PORT, () => console.log(`cTrader Auto Signal v5 running on ${PORT}`));
 app.get("/", (req, res) => {
   res.send("Bot is running 🚀");
 });
